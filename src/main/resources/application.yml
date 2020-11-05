@@ -1,0 +1,17 @@
+server:
+  port: 8585
+  error:
+    include-stacktrace: never
+jms:
+  jwt:
+    security:
+      enabled: true
+    timezone: "America/Bogota"
+    issuer: "www.programacionfacil.net"
+    token:
+      auth:
+        path: "/v1.0/oauth/client_credential/accesstoken"
+      secret: "suscribete si vez este mensaje"
+      expires-in: 3600 # seconds
+    excluded:
+      path: "/v1.0/multi,/v1.0/otraexclusion"
